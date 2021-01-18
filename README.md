@@ -150,3 +150,35 @@ Components:
         Node controller
         Route controller
         Service controller
+
+## containers
+
+Containers are the standard unit of software that package up all of its dependencies so application can run quickly,reliably and os independently.
+
+using private registry
+
+* can configure nodes
+  * need to copy docker config file to var/lib/kubelet/config.json
+
+* can use prepulled images
+
+* can specify imagePullSecretes on pods
+
+### container environment
+
+* a file system
+* info about container
+* info about cluster
+
+## Runtime classes
+
+is a  k8s containers component for selecting the container runtime configuration.
+
+runtime class has 2 significant field name,handler.
+
+```yaml
+kind : RuntimeClass
+metadata:
+    name:
+handler:
+```
